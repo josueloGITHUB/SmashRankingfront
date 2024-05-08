@@ -1,20 +1,16 @@
 .App {
   text-align: center;
+
+}
+.SubTitle {
+  text-align: left;
+  padding: 5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +18,134 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.start-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-button:hover {
+  background-color: #306d33;
+}
+
+.left-button {
+  position: absolute;
+  bottom: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  left: 10px;
+}
+
+.right-button {
+  position: absolute;
+  bottom: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  right: 10px;
+}
+
+.table-container {
+    margin: 0 auto;
+    width: 80%; /* Ajusta el ancho según sea necesario */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ff0000;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #ff0000;
+}
+
+tr:nth-child(even) {
+    background-color: #f30404;
+}
+
+.BackButton {
+  position: fixed;
+  top: 20px; /* Ajusta la distancia desde la parte superior según sea necesario */
+  right: 20px; /* Ajusta la distancia desde la derecha según sea necesario */
+  background-color: red; /* Color de fondo rojo */
+  color: white; /* Color del texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.BackButton:hover {
+  background-color: darkred; /* Color de fondo rojo oscuro al pasar el ratón */
+}
+
+.modal {
+  display: block; /* Asegura que el modal esté visible */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+}
+
+.modal-content {
+  background-color: #da0d0d;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+select {
+  background-color: red; /* Fondo rojo */
+  color: black; /* Texto negro */
+  font-size: 16px; /* Tamaño de fuente */
+  height: 40px; /* Altura del select */
+  padding: 8px; /* Espaciado interno */
+}
+
+select::-ms-expand {
+  color: white; /* Flecha blanca en IE/Edge */
 }
